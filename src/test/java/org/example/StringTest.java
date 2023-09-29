@@ -42,4 +42,16 @@ public class StringTest {
         int index2 = name.indexOf("고");
         assertThat(index2).isEqualTo(3);
     }
+
+    @Test
+    @DisplayName("substring 학습테스트")
+    void substring() {
+        String str0 = "(1,2)";
+        String str1 = str0.substring(1, 4);
+        assertThat(str1).isEqualTo("1,2");
+
+        String str2 = "리눅스토발즈";
+        String str3 = str2.substring(4);
+        assertThat(str3).isEqualTo("발즈");
+    }
 }
