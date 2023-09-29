@@ -4,6 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class StringTest {
     @Test
@@ -61,5 +62,17 @@ public class StringTest {
         int i = 1000;
         String string = String.valueOf(i);
         assertThat(string).isEqualTo("1000");
+    }
+
+    @Test
+    @DisplayName("Exception assertion 학습테스트")
+    void charAtTestException() {
+        String abc = "abc";
+        int index = 100;
+        assertThatThrownBy(() -> {
+            abc.charAt(index);
+        })
+                .isInstanceOf(StringIndexOutOfBoundsException.class)
+                .hasMessageContaining("String index out of range: %d", index);
     }
 }
