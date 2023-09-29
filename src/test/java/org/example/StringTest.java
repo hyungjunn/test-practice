@@ -54,4 +54,12 @@ public class StringTest {
         String str3 = str2.substring(4);
         assertThat(str3).isEqualTo("발즈");
     }
+
+    @Test
+    @DisplayName("valueOf 학습테스트")
+    void valueOf() {
+        int i = 1000;
+        String string = String.valueOf(i);
+        assertThat(string).isEqualTo("1000");
+    }
 }
