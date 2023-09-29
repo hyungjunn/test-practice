@@ -76,7 +76,7 @@ public class StringTest {
     }
 
     @Test
-    @DisplayName("Exception assertion 학습테스트")
+    @DisplayName("Exception assertion 학습테스트2")
     void charAtTestException2() {
         String abc = "abc";
         int index = 4;
