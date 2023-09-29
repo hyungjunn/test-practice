@@ -22,4 +22,12 @@ public class StringTest {
         String[] value = "1".split(",");
         assertThat(value).contains("1");
     }
+
+    @Test
+    @DisplayName("concat 학습테스트")
+    void concat() {
+        String value1 = "123";
+        String value2 = value1.concat("456");
+        assertThat(value2).isEqualTo("123456");
+    }
 }
