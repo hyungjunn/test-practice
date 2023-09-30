@@ -1,5 +1,18 @@
 package org.example;
 
 public class MyLinkedList {
-
+    ListNode tmp = new ListNode();
+    // 새로운 요소를 생성한 다음 추가하고자 하는 위치의 이전 요소의 참조를 새로운 요소에 대한 참조로 변경
+    // 새로운 요소가 그 다음 요소를 참조하도록 한다
+    ListNode add(ListNode head, ListNode nodeToAdd, int position) {
+        tmp = head;
+        for (int i = 0; i < position; i++) {
+            tmp = tmp.next;
+        }
+        ListNode tmp2 = tmp.next;
+        nodeToAdd = new ListNode();
+        tmp.next = nodeToAdd;
+        nodeToAdd.next = tmp2;
+        return nodeToAdd;
+    }
 }
