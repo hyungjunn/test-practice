@@ -15,4 +15,17 @@ public class MyLinkedList {
         nodeToAdd.next = tmp2;
         return nodeToAdd;
     }
+
+    // 삭제하고자 하는 요소의 이전 요소가 삭제하고자 하는 요소의 다음 요소를 참조하도록 한다.
+    ListNode remove(ListNode head, int positionToRemove) {
+        tmp = head;
+        for (int i = 0; i < positionToRemove; i++) {
+            tmp = tmp.next;
+        }
+        ListNode tmp2 = tmp.next;
+        tmp.next = tmp.next.next;
+        tmp2 = null;
+        return null;
+    }
+
 }
