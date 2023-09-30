@@ -13,8 +13,11 @@ dependencies {
     testImplementation "org.junit.jupiter:junit-jupiter:5.9.2"
     testImplementation "org.assertj:assertj-core:3.19.0"
     testImplementation 'junit:junit:4.13.1'
+    implementation group: 'org.kohsuke', name: 'github-api', version: '1.316'
 }
 
 test {
     useJUnitPlatform()
 }
+// https://mvnrepository.com/artifact/org.kohsuke/github-api
+

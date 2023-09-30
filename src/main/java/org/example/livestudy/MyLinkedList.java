@@ -1,4 +1,4 @@
-package org.example;
+package org.example.livestudy;
 
 public class MyLinkedList {
     ListNode tmp = new ListNode();

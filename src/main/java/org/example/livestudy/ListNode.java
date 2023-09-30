@@ -1,4 +1,4 @@
-package org.example;
+package org.example.livestudy;
 
 public class ListNode {
     int value; // 데이터 값(정수로 표현)
