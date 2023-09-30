@@ -27,5 +27,15 @@ public class MyLinkedList {
         tmp2 = null;
         return null;
     }
-
+    // 포함되었는지 알려준다.
+    boolean contains(ListNode head, ListNode nodeToCheck) {
+        tmp = head;
+        while(tmp.next != null) {
+            if (tmp.equals(nodeToCheck)) {
+                return true;
+            }
+            tmp = tmp.next;
+        }
+        return false;
+    }
 }
