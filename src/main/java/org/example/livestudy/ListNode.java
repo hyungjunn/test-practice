@@ -37,6 +37,7 @@ public class ListNode {
 
 
     public static void main(String[] args) {
+
         ListNode head = new ListNode(6);
         ListNode nodeB = new ListNode(3);
         ListNode nodeC = new ListNode(4);
@@ -56,5 +57,6 @@ public class ListNode {
         System.out.println(nodeB);
         System.out.println(head.next);
     }
+
 }
 
