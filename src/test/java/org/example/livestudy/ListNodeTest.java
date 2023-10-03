@@ -33,6 +33,16 @@ class ListNodeTest {
     }
 
     @Test
+    void add1() {
+
+        ListNode nodeF = new ListNode(11);
+
+        head.add(nodeF, head, 1);
+
+        assertThat(head.next).isEqualTo(nodeF);
+    }
+
+    @Test
     void remove() {
     }
 
