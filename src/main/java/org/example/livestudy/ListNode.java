@@ -36,7 +36,13 @@ public class ListNode {
     }
 
     boolean contains(ListNode head, ListNode nodeToCheck) {
-
+        ListNode current = head;
+        while (current.next != null) {
+            if (current.equals(nodeToCheck)) {
+                return true;
+            }
+            current = current.next;
+        }
         return false;
     }
 
