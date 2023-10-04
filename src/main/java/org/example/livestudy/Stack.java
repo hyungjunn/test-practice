@@ -23,4 +23,11 @@ public class Stack {
         }
         return false;
     }
+    boolean isEmpty() {
+        if (count == 0) {
+            return true;
+        }
+        return false;
+    }
+
 }
