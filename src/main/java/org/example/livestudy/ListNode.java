@@ -25,6 +25,13 @@ public class ListNode {
     }
 
     ListNode remove(ListNode head, int positionToRemove) {
+        ListNode current = head;
+        while (--positionToRemove != 0) {
+            current = current.next;
+        }
+        ListNode tmp = current.next;
+        current.next = tmp.next;
+        tmp = null;
         return null;
     }
 
