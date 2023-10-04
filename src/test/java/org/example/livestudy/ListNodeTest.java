@@ -16,6 +16,7 @@ class ListNodeTest {
 
     @BeforeEach
     void setUp() {
+
         head.next = nodeB;
         nodeB.next = nodeC;
         nodeC.next = nodeD;
