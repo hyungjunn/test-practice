@@ -19,6 +19,10 @@ class StackTest {
 
     @Test
     void pop() {
+
+        stack.pop();
+        assertThat(stack.stackArr[0]).isEqualTo(0);
+
     }
 
 }

@@ -18,33 +18,9 @@ public class Stack {
     }
 
     boolean isFull() {
-        if (++count == stackSize) {
+        if (count == stackSize) {
             return true;
         }
         return false;
     }
-
-    boolean isEmpty() {
-        if (count == 0) {
-            return true;
-        }
-        return false;
-    }
-
-    void push(int data) {
-        // 꽉 차면 집어 넣지 못하고
-        if (isFull()) {
-            System.out.println("Stack is full");
-        }
-
-        if (!isFull()) {
-            stackArr[count++] = data;
-        }
-        // 꽉 안차있다면 집어 넣는다. 그리고 count를 1증가 시킨다.
-    }
-
-//    int pop() {
-//
-//        return;
-//    }
 }
