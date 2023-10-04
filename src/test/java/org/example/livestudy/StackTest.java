@@ -32,4 +32,15 @@ class StackTest {
         assertThat(stack.stackArr[0]).isEqualTo(1);
 
     }
+
+
+    @Test
+    void push2() {
+
+        stack.push(1);
+        stack.push(2);
+        assertThat(stack.stackArr[1]).isEqualTo(2);
+
+    }
+
 }
