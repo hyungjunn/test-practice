@@ -36,10 +36,22 @@ public class Stack {
             System.out.println("Stack is full");
         }
 
+        // 꽉 안차있다면 집어 넣는다. 그리고 count를 1증가 시킨다.
         if (!isFull()) {
             stackArr[count++] = data;
         }
-        // 꽉 안차있다면 집어 넣는다. 그리고 count를 1증가 시킨다.
+    }
+
+    int pop() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty");
+        }
+
+        if (!isEmpty()) {
+            stackArr[count] = 0;
+        }
+
+        return stackArr[count--];
     }
 
 }
