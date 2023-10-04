@@ -1,5 +1,6 @@
 package org.example.livestudy;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -9,13 +10,28 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ListNodeStackTest {
 
-    ListNode head = new ListNode(0);
-    ListNode first = new ListNode(10);
+    private ListNodeStack stack;
+    private static final int[] PUSH_DATA = {10, 20, 30, 40, 50};
+
+    @BeforeEach
+    void setUp() {
+        stack = new ListNodeStack();
+    }
 
     @Test
     void push() {
-        head.add(first, head, 1);
-        assertThat(head.next).isEqualTo(first);
+        stack.push(10);
+
+        ListNode head = stack.head;
+
+        assertThat(head.value).isEqualTo(PUSH_DATA[0]);
+
+        stack.push(20);
+        stack.push(30);
+        stack.push(40);
+        stack.push(50);
+
+
     }
 
     @Test
