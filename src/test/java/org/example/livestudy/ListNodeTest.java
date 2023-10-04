@@ -64,5 +64,9 @@ class ListNodeTest {
 
     @Test
     void contains() {
+
+        //head.contains(head, nodeC);
+
+        assertTrue(head.contains(head, nodeC));
     }
 }
