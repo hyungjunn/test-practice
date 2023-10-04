@@ -25,9 +25,7 @@ public class ListNode {
     }
 
     ListNode remove(ListNode head, int positionToRemove) {
-
-
-        return head;
+        return null;
     }
 
     boolean contains(ListNode head, ListNode nodeToCheck) {

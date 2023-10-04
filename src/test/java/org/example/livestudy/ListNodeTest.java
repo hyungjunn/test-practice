@@ -40,11 +40,19 @@ class ListNodeTest {
         head.add(nodeF, head, 1);
 
         assertThat(head.next).isEqualTo(nodeF);
+
     }
 
     @Test
     void remove() {
+
+        head.remove(nodeB, 2);
+
+        assertThat(nodeC.next).isEqualTo(nodeE);
+
     }
+
+
 
     @Test
     void contains() {
