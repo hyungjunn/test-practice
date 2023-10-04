@@ -8,30 +8,18 @@ package org.example.livestudy;
  */
 public class ListNodeStack {
 
-    private int stackSize;
+    private ListNode head;
 
-    private int count;
-
-    ListNode head;
-
-    private boolean isFull(){
-        if (count == stackSize) {
-            return true;
-        }
-        return false;
+    public ListNodeStack(){
+        this.head = new ListNode(0);
     }
 
     void push(int data) {
-        // 1. 가득 차있을 때
-        if (isFull()) {
-
-        }
-        // 2. 가득 차있지 않을 때
+        ListNode node = new ListNode(data);
+        node.add(this.head, node, 1);
     }
 
     int pop() {
-        // 1. 전부 비어 있을 때
-        // 2. 전부 비어 있지 않을때
         return 0;
     }
 
