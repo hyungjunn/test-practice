@@ -52,6 +52,14 @@ class ListNodeTest {
 
     }
 
+    @Test
+    void remove1() {
+
+        head.remove(head, 2);
+
+        assertThat(nodeB.next).isEqualTo(nodeD);
+
+    }
 
 
     @Test
