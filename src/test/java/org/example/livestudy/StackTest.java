@@ -25,4 +25,11 @@ class StackTest {
 
     }
 
+    @Test
+    void push1() {
+
+        stack.push(1);
+        assertThat(stack.stackArr[0]).isEqualTo(1);
+
+    }
 }
