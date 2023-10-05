@@ -29,4 +29,10 @@ public class StringCalculator1 {
         return string.split(" ");
     }
 
+
+    // 문자열 => 숫자 기능.
+    double toInt(String string) {
+        return Integer.parseInt(string);
+    }
+
 }
