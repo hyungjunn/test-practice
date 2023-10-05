@@ -37,10 +37,10 @@ public class StringCalculator {
 
 class Main {
     public static void main(String[] args) {
-        //System.out.println(Operation.PLUS.apply(1, 2));
-//        StringCalculator stringCalculator = new StringCalculator();
+        System.out.println(Operation.PLUS.apply(1, 2));
+        //StringCalculator stringCalculator = new StringCalculator();
 //        System.out.println(stringCalculator.plus(1,2));
-        //System.out.println(Operation.PLUS);
+        System.out.println(Operation.PLUS);
     }
 }
 
