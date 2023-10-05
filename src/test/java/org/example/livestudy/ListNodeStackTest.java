@@ -34,6 +34,7 @@ class ListNodeStackTest {
         stack.push(30);
 
         assertThat(stack.pop()).isEqualTo(30);
+        assertThat(stack.pop()).isEqualTo(20);
 
     }
 }
