@@ -17,8 +17,8 @@ public class StringCalculator1 {
     }
 
     // 2. 빈 문자열인지 확인한다.
-    boolean isEmpty(String input) {
-        if (input=="" || input == null) {
+    static boolean isEmpty(String input) {
+        if (input.equals(" ") || input == null) {
             return true;
         }
         return false;
