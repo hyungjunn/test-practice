@@ -25,16 +25,15 @@ class ListNodeStackTest {
         ListNode head = stack.head;
 
         assertThat(head.value).isEqualTo(PUSH_DATA[0]);
-
-        stack.push(20);
-        stack.push(30);
-        stack.push(40);
-        stack.push(50);
-
-
     }
 
     @Test
     void pop() {
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+
+        assertThat(stack.pop()).isEqualTo(30);
+
     }
 }

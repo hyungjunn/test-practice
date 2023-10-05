@@ -25,8 +25,7 @@ public class ListNodeStack {
     }
 
     int pop() {
-        head.remove(this.head, 1);
-        return -1;
+        return head.remove(this.head, 1).value;
     }
 
 }

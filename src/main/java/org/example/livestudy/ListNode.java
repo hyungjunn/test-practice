@@ -31,8 +31,8 @@ public class ListNode {
         }
         ListNode tmp = current.next;
         current.next = tmp.next;
-        tmp = null;
-        return null;
+        tmp.next = null;
+        return tmp;
     }
 
     boolean contains(ListNode head, ListNode nodeToCheck) {
