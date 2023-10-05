@@ -55,4 +55,24 @@ public class StringCalculator1 {
         return result;
     }
 
+
+    // 계산
+    double calculate(double first, String operation, double second) {
+        if ("+".equals(operation)) {
+            return Operation.PLUS.apply(first, second);
+        }
+
+        if ("-".equals(operation)) {
+            return Operation.MINUS.apply(first, second);
+        }
+
+        if ("*".equals(operation)) {
+            return Operation.TIMES.apply(first, second);
+        }
+
+        if ("/".equals(operation)) {
+            return Operation.DIVIDEBY.apply(first, second);
+        }
+        throw new RuntimeException();
+    }
 }
