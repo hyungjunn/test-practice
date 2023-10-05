@@ -35,4 +35,13 @@ public class StringCalculator1 {
         return Integer.parseInt(string);
     }
 
+    // 3. 빈 문자열이면 예외처리한다.
+    // 4. 빈 문자열이 아닐 때 계산을 실행한다.
+    double doCalculations(String input) {
+        if (isEmpty(input)) {
+            throw new RuntimeException();
+        }
+        return doCalculationsSplitedString(splitInput(input));
+    }
+
 }
