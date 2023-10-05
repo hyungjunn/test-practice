@@ -44,4 +44,15 @@ public class StringCalculator1 {
         return doCalculationsSplitedString(splitInput(input));
     }
 
+
+    // 계산 실행
+    double doCalculationsSplitedString(String[] strings) {
+        //int result = toInt(strings[0]);
+        double result = toInt(strings[0]);
+        for (int i = 0; i < strings.length-2; i+=2) {
+            result = calculate(result, strings[i + 1], toInt(strings[i+2]));
+        }
+        return result;
+    }
+
 }
