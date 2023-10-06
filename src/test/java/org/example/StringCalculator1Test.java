@@ -1,16 +1,23 @@
 package org.example;
 
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.example.StringCalculator1.toInt;
 import static org.junit.jupiter.api.Assertions.*;
 
 class StringCalculator1Test {
 
     StringCalculator1 stringCalculator1;
+
+    @BeforeEach
+    void setUp(){
+        stringCalculator1 = new StringCalculator1();
+    }
 
     @ParameterizedTest
     @ValueSource(strings = {" "})
@@ -27,7 +34,9 @@ class StringCalculator1Test {
     }
 
     @Test
-    void toInt() {
+    void 문자열을_숫자로_바꿔주는_메서드() {
+        String string = "123";
+        Assertions.assertEquals(toInt(string), 123);
     }
 
     @Test
@@ -40,5 +49,11 @@ class StringCalculator1Test {
 
     @Test
     void calculate() {
+    }
+
+    @Test
+    void 최종결과확인(){
+        StringCalculator1 stringCalculator1 = new StringCalculator1();
+        stringCalculator1.doCalculations(stringCalculator1.input());
     }
 }

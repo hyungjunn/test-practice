@@ -11,7 +11,7 @@ public class StringCalculator1 {
     }
 
     // 1. 문자열을 입력한다
-    private String input() {
+    String input() {
         Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
     }
@@ -31,7 +31,7 @@ public class StringCalculator1 {
 
 
     // 문자열 => 숫자 기능.
-    double toInt(String string) {
+    static double toInt(String string) {
         return Integer.parseInt(string);
     }
 
