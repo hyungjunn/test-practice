@@ -25,7 +25,7 @@ public class StringCalculator1 {
     }
 
     // 문자열을 나누는 기능.
-    String[] splitInput(String string) {
+    static String[] splitInput(String string) {
         return string.split(" ");
     }
 
