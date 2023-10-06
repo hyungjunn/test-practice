@@ -7,6 +7,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.example.StringCalculator1.splitInput;
 import static org.example.StringCalculator1.toInt;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -41,10 +42,13 @@ class StringCalculator1Test {
 
     @Test
     void doCalculations() {
+
     }
 
     @Test
     void doCalculationsSplitedString() {
+        String[] strings = {"1", "+", "1", "-", "1"};
+        Assertions.assertEquals(stringCalculator1.doCalculationsSplitedString(strings), 1);
     }
 
     @Test
