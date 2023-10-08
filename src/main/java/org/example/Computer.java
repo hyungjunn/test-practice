@@ -19,4 +19,11 @@ public class Computer {
         }
         return computerNumber;
     }
+
+    boolean isTrue(int a, int b) {
+        if (a == b) {
+            return true;
+        }
+        return false;
+    }
 }
