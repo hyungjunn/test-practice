@@ -1,4 +1,4 @@
-package org.example;
+package org.example.number_baseball.view;
 
 import java.util.Scanner;
 

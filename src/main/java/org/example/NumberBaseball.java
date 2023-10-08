@@ -1,32 +1,74 @@
 package org.example;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
+import java.util.Scanner;
 
 import static java.lang.Integer.parseInt;
 
 public class NumberBaseball {
     public static void main(String[] args) {
-        Computer computer = new Computer();
-        computer.makeNumber();
 
-        InputView inputView = new InputView();
+        Scanner scanner = new Scanner(System.in);
+        boolean playAgain = false;
+        while (!playAgain) {
+            int[] computerNumbers = new int[3];
 
-        int[] playerNumber = new int[3];
-        String input = inputView.inputNumber();
-        for (int i = 0; i < playerNumber.length; i++) {
-            playerNumber[i] = parseInt(input.substring(i, i+1));
+            for (int i = 0; i < 3; i++) {
+                computerNumbers[i] = (int) (Math.random() * 9) + 1;
+                for (int j = 0; j < i; j++) {
+                    if (computerNumbers[i] == computerNumbers[j]) {
+                        i--;
+                    }
+                }
+            }
+            boolean gameStart = true;
+            while (gameStart) {
+                System.out.print("숫자를 입력해주세요: ");
+                int[] playerNumbers = new int[3];
+                try {
+                    String playerNumber = scanner.nextLine();
+                    for (int i = 0; i < playerNumbers.length; i++) {
+                        playerNumbers[i] = parseInt(playerNumber.substring(i, i + 1));
+                        // TODO 세자리 수보다 길게 입력했을때, 바로 엔터눌렀을 때 예외들
+                        if (playerNumbers[i] < 1 || playerNumbers[i] > 9 || playerNumber.equals(" ") || playerNumber == null || playerNumber.length() < 3) {
+                            throw new IllegalArgumentException();
+                        }
+                    }
+                } catch (IllegalArgumentException ie) {
+                    System.out.println("세 자리 수의 정수로 다시 입력해주세요.");
+                }
+                int numOfStrike = 0;
+                int numOfBall = 0;
+                int numOfFourball = 0;
+                for (int i = 0; i < computerNumbers.length; i++) {
+                    for (int j = 0; j < playerNumbers.length; j++) {
+                        if (computerNumbers[i] == playerNumbers[j]) {
+                            if (i == j) {
+                                numOfStrike++;
+                            } else {
+                                numOfBall++;
+                            }
+                        } else {
+                            numOfFourball++;
+                        }
+                    }
+                }
+
+                if (numOfStrike == 3) {
+                    System.out.println(numOfStrike + "스트라이크");
+                    System.out.println("3개의 숫자를 모두 맞히셨습니다! 게임 종료");
+                    gameStart = false;
+                } else if (numOfFourball != 9) {
+                    System.out.println(numOfBall + "볼 " + numOfStrike + "스트라이크");
+                } else {
+                    System.out.println("포볼");
+                }
+            }
+            System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
+            String choice = scanner.nextLine();
+            if (!choice.equalsIgnoreCase("1")) {
+                playAgain = false;
+            }
         }
     }
 }
-
-// 컴퓨터가 자신의 숫자와 플레이어의 숫자를 비교한다.
-// 컴퓨터가 비교한 결과를 가지고 화면에 포볼,볼,스트라이크를 출력한다.
-// 다 맞출때(3스트라이크)까지 반복한다.
-// 3스트라이크가 되면 반복이 끝나고 컴퓨터가 "3개의 숫자를 모두 맞히셨습니다! 게임 종료"를 출력한다.
-// 컴퓨터가 "게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요."를 출력한다.
-// 플레이어가 1을 입력하면 처음부터 다시 시작한다.
-// 플레이어가 2를 입력하면 완전히 종료된다.
-
