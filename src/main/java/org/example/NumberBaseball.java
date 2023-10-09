@@ -1,7 +1,5 @@
 package org.example;
 
-import org.kohsuke.github.GitHubRateLimitHandler;
-
 import java.util.*;
 
 import static java.lang.Integer.parseInt;
