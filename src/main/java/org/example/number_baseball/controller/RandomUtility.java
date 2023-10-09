@@ -10,16 +10,12 @@ public class RandomUtility {
     private static final int MIN_NUMBERS = 1;
     private static final int MAX_NUMBERS = 9;
 
-
     public List<Integer> generateRandomNumbers() {
         List<Integer> randomNumbers = new ArrayList<>();
-
         for (int i = 0; i < RANDOM_NUMBERS_SIZE; i++) {
             randomNumbers.add(generateRandomNumber(randomNumbers));
         }
-
         return randomNumbers;
-
     }
 
     private int generateRandomNumber(List<Integer> randomNumbers){
