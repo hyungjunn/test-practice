@@ -25,9 +25,9 @@ public class NumberBaseball {
             boolean gameStart = true;
             while (gameStart) {
 
-                System.out.print("숫자를 입력해주세요: ");
                 int[] playerNumbers = new int[3];
-                String playerNumber = scanner.nextLine();
+           //     System.out.print("숫자를 입력해주세요: ");
+             //   String playerNumber = scanner.nextLine();
 
                 for (int i = 0; i < playerNumbers.length; i++) {
                     playerNumbers[i] = parseInt(playerNumber.substring(i, i + 1));
@@ -75,8 +75,8 @@ public class NumberBaseball {
                 }
             }
 
-            System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
-            String choice = scanner.nextLine();
+            //System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
+            //String choice = scanner.nextLine();
             try {
                 if (choice.equals("1") || choice.equals("2")) {
                     throw new RuntimeException();
