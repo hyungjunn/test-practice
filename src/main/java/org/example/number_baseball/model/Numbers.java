@@ -20,10 +20,10 @@ public class Numbers {
         return computerNumbers;
     }
 
-    private int generateComputerNumber(List<Integer> computerNumbers){
+    private int generateComputerNumber(List<Integer> computerNumbers) {
         Random random = new Random();
         while (true) {
-            int computerNumber = random.nextInt(MIN_NUMBERS, MAX_NUMBERS+1);
+            int computerNumber = random.nextInt(MIN_NUMBERS, MAX_NUMBERS + 1);
 
             if (isDifferentNumber(computerNumbers, computerNumber)) {
                 return computerNumber;
@@ -31,7 +31,7 @@ public class Numbers {
         }
     }
 
-    private boolean isDifferentNumber(List<Integer> randomNumbers, int randomNumber){
+    private boolean isDifferentNumber(List<Integer> randomNumbers, int randomNumber) {
         return !randomNumbers.contains(randomNumber);
     }
 
@@ -39,6 +39,23 @@ public class Numbers {
         return Arrays.stream(input.split(""))
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
+    }
+
+    // 숫자가 1~9만 가능
+//    private boolean validatePlayerNumber(String input) {
+//        for (int i = 0; i < input.length(); i++) {
+//            if (isBetween1And9(input.charAt(i))) {
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
+
+    private boolean isBetween1And9(String input) {
+        for (int i = 0; i < input.length(); i++) {
+            return 1 <= input.charAt(i) && input.charAt(i) <= 9;
+        }
+        return false;
     }
 
 }
