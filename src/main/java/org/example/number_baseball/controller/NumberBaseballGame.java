@@ -1,33 +1,33 @@
-package org.example;
+package org.example.number_baseball.controller;
 
-import java.util.*;
+import java.util.Scanner;
 
 import static java.lang.Integer.parseInt;
 
-public class NumberBaseball {
-    //public static void main(String[] args) {
+public class NumberBaseballGame {
+    public static void main(String[] args) {
 
-        //Scanner scanner = new Scanner(System.in);
-        //boolean playAgain = false;
-        //while (!playAgain) {
-            //int[] computerNumbers = new int[3];
+        Scanner scanner = new Scanner(System.in);
+        boolean playAgain = false;
+        while (!playAgain) {
+            int[] computerNumbers = new int[3];
 
 
 
-//            for (int i = 0; i < 3; i++) {
-//                computerNumbers[i] = (int) (Math.random() * 9) + 1;
-//                for (int j = 0; j < i; j++) {
-//                    if (computerNumbers[i] == computerNumbers[j]) {
-//                        i--;
-//                    }
-//                }
-//            }
+            for (int i = 0; i < 3; i++) {
+                computerNumbers[i] = (int) (Math.random() * 9) + 1;
+                for (int j = 0; j < i; j++) {
+                    if (computerNumbers[i] == computerNumbers[j]) {
+                        i--;
+                    }
+                }
+            }
             boolean gameStart = true;
             while (gameStart) {
 
                 int[] playerNumbers = new int[3];
-           //     System.out.print("숫자를 입력해주세요: ");
-             //   String playerNumber = scanner.nextLine();
+                System.out.print("숫자를 입력해주세요: ");
+                String playerNumber = scanner.nextLine();
 
                 for (int i = 0; i < playerNumbers.length; i++) {
                     playerNumbers[i] = parseInt(playerNumber.substring(i, i + 1));
@@ -75,8 +75,8 @@ public class NumberBaseball {
                 }
             }
 
-            //System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
-            //String choice = scanner.nextLine();
+            System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
+            String choice = scanner.nextLine();
             try {
                 if (choice.equals("1") || choice.equals("2")) {
                     throw new RuntimeException();
