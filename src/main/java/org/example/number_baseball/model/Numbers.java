@@ -58,4 +58,11 @@ public class Numbers {
         return false;
     }
 
+    private boolean isAppropriateLength(String input) {
+        if (input.length() == 3) {
+            return true;
+        }
+        return false;
+    }
+
 }
