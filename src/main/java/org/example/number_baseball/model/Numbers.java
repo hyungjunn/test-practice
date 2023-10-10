@@ -91,6 +91,13 @@ public class Numbers {
         }
     }
 
-
+    // 볼 개수 세기
+    private void countBall(List<Integer> computerNumber, List<Integer> playNumber) {
+        for (int i = 0; i < playNumber.size(); i++) {
+            if (computerNumber.get(i) == playNumber.get(i % 3) && i != i % 3) {
+                ballCount++;
+            }
+        }
+    }
 }
 
