@@ -51,6 +51,7 @@ public class Numbers {
 //        return false;
 //    }
 
+    // 숫자가 1~9사이인지
     private boolean isBetween1And9(String input) {
         for (int i = 0; i < input.length(); i++) {
             return 1 <= input.charAt(i) && input.charAt(i) <= 9;
@@ -58,11 +59,36 @@ public class Numbers {
         return false;
     }
 
+    // 3자리 숫자인지
     private boolean isAppropriateLength(String input) {
         if (input.length() == 3) {
             return true;
         }
         return false;
+    }
+
+    // 서로 다른 숫자인지 확인
+    private boolean isDifferent(String input) {
+        return Arrays.stream(input.split(""))
+                .distinct()
+                .count() < RANDOM_NUMBERS_SIZE;
+    }
+
+    // 서로 다른 숫자면 예외 던지기
+    private void isDifferentNumber(String input) {
+        if (isDifferent(input)) {
+            throw new IllegalArgumentException("서로 다른 숫자를 입력해야 됩니다.");
+        }
+    }
+
+    // 숫자만 있는지 확인
+    private void isNumber(String input) {
+        try {
+            Arrays.stream(input.split(""))
+                    .forEach(Integer::parseInt);
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("숫자만 입력할 수 있습니다.");
+        }
     }
 
 }
