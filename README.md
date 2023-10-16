@@ -1,7 +1,7 @@
 # 숫자야구 게임
 
 ## 기능 구현 목록
-- [ ] 1부터 9까지 서로 다른 숫자 3개를 생성한다. - NumberGenerator#createRandomNumbers()
+- [X] 1부터 9까지 서로 다른 숫자 3개를 생성한다. - NumberGenerator#createRandomNumbers()
 - [ ] 컴퓨터의 숫자들과 플레이어의 숫자들을 비교한다. - Referee#compare()
     - [ ] 몇 개의 숫자들이 같은지 알아낸다. - Judgement#correctCount()
     - [ ] 특정 자리에 특정 숫자가 있는지 알 수 있다. - Judgement#hasPlace()
