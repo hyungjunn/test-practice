@@ -1,4 +1,4 @@
-package org.example.number_baseball.controller;
+package org.example.number_baseball;
 
 import java.util.Scanner;
 

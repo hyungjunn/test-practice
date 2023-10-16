@@ -15,6 +15,16 @@ public class Numbers {
     private int strikeCount;
     private int ballCount;
 
+    protected List<Number> numbers;
+
+    public Numbers(){
+
+    }
+
+    public Numbers(String input) {
+        this.numbers = generatePlayerNumber(input);
+    }
+
     public List<Integer> generateComputerNumbers() {
         List<Integer> computerNumbers = new ArrayList<>();
         for (int i = 0; i < RANDOM_NUMBERS_SIZE; i++) {
@@ -38,14 +48,14 @@ public class Numbers {
         return !randomNumbers.contains(randomNumber);
     }
 
-    private List<Integer> generatePlayerNumber(String input) {
+    public List<Number> generatePlayerNumber(String input) {
         return Arrays.stream(input.split(""))
-                .map(Integer::parseInt)
+                .map(x -> new Number(Integer.parseInt(x)))
                 .collect(Collectors.toList());
     }
 
     // 숫자가 1~9사이인지
-    private boolean isBetween1And9(String input) {
+    public boolean isBetween1And9(String input) {
         for (int i = 0; i < input.length(); i++) {
             return 1 <= input.charAt(i) && input.charAt(i) <= 9;
         }
@@ -54,10 +64,7 @@ public class Numbers {
 
     // 3자리 숫자인지
     private boolean isAppropriateLength(String input) {
-        if (input.length() == 3) {
-            return true;
-        }
-        return false;
+        return input.length() == 3;
     }
 
     // 서로 다른 숫자인지 확인
