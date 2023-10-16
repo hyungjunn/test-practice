@@ -14,12 +14,10 @@ public class Referee {
                 return "낫싱";
             }
 
-            if(count <= 3 && judgement.hasPlace(computer, i, player.get(i))) {
+            if (count <= 3 && judgement.hasPlace(computer, i, player.get(i))) {
                 strike++;
             }
         }
-        // correctCount가 3일 때
-        // ture가 몇 개 인지에 따라 나눔
 
         return strike + "스트라이크 " + (count - strike) + "볼";
     }

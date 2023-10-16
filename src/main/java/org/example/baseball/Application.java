@@ -46,6 +46,6 @@ public class Application {
 //        int input3 = scanner.nextInt();
 
         Referee referee = new Referee();
-        System.out.println(referee.compare(Arrays.asList(3,4,5), Arrays.asList(3, 4, 5)));
+        System.out.println(referee.compare(Arrays.asList(3, 4, 5), Arrays.asList(3, 4, 5)));
     }
 }
