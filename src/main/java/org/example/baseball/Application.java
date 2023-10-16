@@ -2,10 +2,12 @@ package org.example.baseball;
 
 import org.example.baseball.domain.Judgement;
 import org.example.baseball.domain.NumberGenerator;
+import org.example.baseball.domain.Referee;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class Application {
     public static void main(String[] args) {
@@ -32,11 +34,18 @@ public class Application {
 //
 //        System.out.println(judgement.correctCount(computer, player));
 
-        Judgement judgement = new Judgement();
+//        Judgement judgement = new Judgement();
+//
+//        System.out.println(judgement.correctCount(Arrays.asList(1,2,3), Arrays.asList(2, 3, 4)));
+//
+//        System.out.println(judgement.hasPlace(Arrays.asList(1,2,3), 1, 3));
 
-        System.out.println(judgement.correctCount(Arrays.asList(1,2,3), Arrays.asList(2, 3, 4)));
+//        Scanner scanner = new Scanner(System.in);
+//        int input1 = scanner.nextInt();
+//        int input2 = scanner.nextInt();
+//        int input3 = scanner.nextInt();
 
-        System.out.println(judgement.hasPlace(Arrays.asList(1,2,3), 1, 3));
-
+        Referee referee = new Referee();
+        System.out.println(referee.compare(Arrays.asList(3,4,5), Arrays.asList(3, 4, 5)));
     }
 }
