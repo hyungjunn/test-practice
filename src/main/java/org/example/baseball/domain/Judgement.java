@@ -14,8 +14,8 @@ public class Judgement {
         return count;
     }
 
-    public boolean hasPlace(List<Integer> computer, int placeNumber, int number) {
-        return (computer.get(placeNumber)).equals(number);
+    public boolean hasPlace(List<Integer> computer, int placeIndex, int number) {
+        return (computer.get(placeIndex)).equals(number);
     }
 
 }
