@@ -1,4 +1,6 @@
-package org.example;
+package org.example.pracitce_generics;
+
+import org.example.pracitce_generics.Box;
 
 public class BoxExam {
     public static void main(String[] args) {
